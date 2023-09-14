@@ -1,0 +1,96 @@
+--- 
+title: "Рыбный шаблон"
+author: "Евгенич"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+lang: "ru"
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+mainfont: Georgia
+monofont: "Courier New"
+monofontoptions: "Scale=0.7"
+fontsize: 12pt
+papersize: a4
+geometry:
+  - top=1in
+  - left=0.7in
+  - right=0.7in
+  - bottom=1in
+include-before:
+#\stepcounter{page} # инкримент номера страницы, поскольку титульный лист это страница 1
+  
+header-includes:
+# \usepackage[T2A]{fontenc}            % внутренняя кодировка  TeX
+# \usepackage[utf8x]{inputenc}         % кодовая страница документа
+# \usepackage[english]{babel} % локализация и переносы
+# \usepackage[russian,english]{babel}
+# \usepackage{fontspec}
+- \setmainfont{Georgia}
+# \setsansfont{Sans Serif}
+- \setmonofont{Courier New}
+- \usepackage[fontsize=14pt]{scrextend}
+- \usepackage{indentfirst}
+- \setlength\parindent{12.7mm}
+- \pagestyle{plain} # номер страницы внизу по центру
+---
+
+# Введение  {#index}
+
+Здесь я напишу Введение или Пролог, или Аннотацию  
+Потом добавлю отступ -- Красной строки для ПДФ-файл (уже добавил)  
+
+Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+
+## Подзаголовок 
+
+Первый подзаголок -- будет текст  
+
+Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.  
+
+
+## Подзаголовок два  
+
+Надо будет и атрибуты добавить вроде нет   
+
+Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.  
+
+
+## Render book
+
+You can render the HTML version of this example book without changing anything:
+
+1. Find the **Build** pane in the RStudio IDE, and
+
+1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
+
+Or build the book from the R console:
+
+```{r, eval=FALSE}
+bookdown::render_book()
+```
+
+To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+
+## Preview book
+
+As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
+
+```{r eval=FALSE}
+bookdown::serve_book()
+```
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

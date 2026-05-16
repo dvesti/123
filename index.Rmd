@@ -24,22 +24,26 @@ geometry:
   - left=0.7in
   - right=0.7in
   - bottom=1in
-include-before:
+#include-before:
 #\stepcounter{page} # инкримент номера страницы, поскольку титульный лист это страница 1
   
-header-includes:
+#header-includes:
 # \usepackage[T2A]{fontenc}            % внутренняя кодировка  TeX
 # \usepackage[utf8x]{inputenc}         % кодовая страница документа
 # \usepackage[english]{babel} % локализация и переносы
 # \usepackage[russian,english]{babel}
 # \usepackage{fontspec}
-- \setmainfont{Georgia}
+#- \setmainfont{Georgia}
 # \setsansfont{Sans Serif}
-- \setmonofont{Courier New}
-- \usepackage[fontsize=14pt]{scrextend}
+#- \setmonofont{Courier New}
+#- \usepackage[fontsize=14pt]{scrextend}
+#- \usepackage{indentfirst}
+#- \setlength\parindent{12.7mm}
+#- \pagestyle{plain} # номер страницы внизу по центру
+header-includes:  
 - \usepackage{indentfirst}
 - \setlength\parindent{12.7mm}
-- \pagestyle{plain} # номер страницы внизу по центру
+- \pagestyle{plain} # номер страницы внизу по центру 
 ---
 
 # Введение  {#index}
